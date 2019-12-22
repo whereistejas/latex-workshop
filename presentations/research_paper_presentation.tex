@@ -1,6 +1,10 @@
 \documentclass{beamer}
 
 \usepackage{listings}
+\usepackage{fancyvrb}
+\usepackage{minted}
+
+\lstset{language=TeX}
 
 \title{How to write an \texttt{article}}
 \author{Tejas Sanap}
@@ -8,15 +12,6 @@
 
 \begin{document}
 	
-	\AtBeginSection[]
-	{
-	  \begin{frame}
-	    \frametitle{Table of Contents}
-	    \tableofcontents[currentsection]
-	  \end{frame}
-	}
-
-
 	\begin{frame}
 		\titlepage
 	\end{frame}
@@ -30,7 +25,7 @@
 	\end{frame}
 
 	\section{Lists}
-	\begin{frame}
+	\begin{frame}[fragile]
 		\frametitle{Types of Lists}
 		\only<1>{
 			There are three types of lists in \LaTeX:
@@ -40,22 +35,22 @@
 				\item \texttt{description}.
 			\end{itemize}
 		}
-		\only<2>{
-			\begin{example}
-				\begin{lstlisting}
-					\begin{itemize}
-						\item Naruto.
-						\item Sakura.
-						\item Sasuke.
-					\end{itemize}
-				\end{lstlisting}
-			\end{example}
-		}
+		\begin{onlyenv}<2>
+			Syntax:
+			\begin{minted}[autogobble]{latex}
+				\begin{itemize}
+					\item Naruto Uzumaki.
+					\item Sakura
+					\item Sasuke Uchiha.
+				\end{itemize}
+			\end{minted}
+		\end{onlyenv}
 	\end{frame}
+	
 
 	\section{Images}
 	\begin{frame}
-		\frametitle{Imaeges}
+		\frametitle{Images}
 		
 	\end{frame}
 

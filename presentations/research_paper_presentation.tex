@@ -1,0 +1,67 @@
+\documentclass{beamer}
+
+\usepackage{listings}
+
+\title{How to write an \texttt{article}}
+\author{Tejas Sanap}
+\date{\today}
+
+\begin{document}
+	
+	\AtBeginSection[]
+	{
+	  \begin{frame}
+	    \frametitle{Table of Contents}
+	    \tableofcontents[currentsection]
+	  \end{frame}
+	}
+
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	\begin{frame}
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	\begin{frame}
+		\frametitle{What makes an \texttt{article} class special?}
+		
+	\end{frame}
+
+	\section{Lists}
+	\begin{frame}
+		\frametitle{Types of Lists}
+		\only<1>{
+			There are three types of lists in \LaTeX:
+			\begin{itemize}
+				\item \texttt{itemize}.
+				\item \texttt{enumerate}.
+				\item \texttt{description}.
+			\end{itemize}
+		}
+		\only<2>{
+			\begin{example}
+				\begin{lstlisting}
+					\begin{itemize}
+						\item Naruto.
+						\item Sakura.
+						\item Sasuke.
+					\end{itemize}
+				\end{lstlisting}
+			\end{example}
+		}
+	\end{frame}
+
+	\section{Images}
+	\begin{frame}
+		\frametitle{Imaeges}
+		
+	\end{frame}
+
+	\section{Links}
+	\begin{frame}
+		\frametitle{Links}
+	\end{frame}
+
+\end{document}

@@ -7,6 +7,8 @@
 \temporal<#1>{\color{red!50}}{\color{black}}{\color{black!50}}}
 
 \usepackage{tikz}
+\usepackage{minted}
+
 \usetikzlibrary{shapes.geometric, arrows}
 
 \author{Tejas Sanap}
@@ -28,7 +30,7 @@
 		\end{itemize}
 	\end{frame}
 
-	\begin{frame}
+	\begin{frame}[t]
 		\frametitle{Type-setting?}
 		\onslide<1->{What is type-setting?}
 
@@ -39,9 +41,11 @@
 		\end{itemize}
 		}
 		\onslide<3->{How do we typeset? \\}
-		\onslide<4->{
-		\vfill
+		\only<4>{
 		\huge{MS WORD!}
+		}
+		\only<5>{
+		\huge{{\LaTeX}!}
 		}
 	\end{frame}
 
@@ -68,6 +72,7 @@
 			\item An improvement over \TeX.
 			\item Not a WYSIWYG editor.
 			\item Uses simple plaintext.
+			\item \LaTeX provides the user with a set of pre-defined templates.
 		\end{itemize}
 	\end{frame}
 
@@ -125,9 +130,63 @@
 		}
 	\end{frame}
 
-	\begin{frame}
-		\frametitle{What can I do with \LaTeX?}
-		
+	\begin{frame}[fragile]
+		\frametitle{Structure of {\LaTeX} source file.}
+		\begin{minted}[beameroverlays, linenos, autogobble]{latex}
+			\documentclass{article}
+
+			\usepackage{hyperref}
+
+			\title{A critical analysis of Naruto: the Manga}
+			\author{Tejas Sanap}
+
+			\begin{document}
+				\maketitle
+				
+			\end{document}
+		\end{minted}
+	\end{frame}
+
+	\begin{frame}[t]
+		\frametitle{Page Geometry}
+		\begin{columns}
+			\column{0.5\textwidth}
+				\begin{enumerate}
+					\item[4.] \mintinline{latex}{\topmargin}
+					\item [7.] \mintinline{latex}{\textheight}
+					\item[8.] \mintinline{latex}{\textwidth}
+					\item[11.] \mintinline{latex}{\footskip}
+				\end{enumerate}
+			\column{0.5\textwidth}
+			\includegraphics[width=\textwidth, height=\textheight, keepaspectratio]{images/Latex_layout.png}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Environments}
+		\visible<1-> {
+		\emph{Environments} are used to format a bunch of text in {\LaTeX} documents instead of doing it in only one place. }
+		\vfill
+		\begin{visibleenv}<2->
+			Example:
+
+			\begin{minted}[beameroverlays, linenos, autogobble]{latex}
+				\begin{center}
+					The Jinchuriki.
+				\end{center}
+			\end{minted}
+		\end{visibleenv}
+		\vfill
+		\begin{visibleenv}<3>
+			A few of the most common environments we see are:
+
+			\begin{itemize}
+				\item \texttt{align}.
+				\item \texttt{figure}.
+				\item \texttt{equation}.
+				\item \texttt{document}.
+			\end{itemize}
+		\end{visibleenv}
 	\end{frame}
 
 \end{document}

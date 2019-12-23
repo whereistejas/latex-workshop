@@ -1,0 +1,62 @@
+\documentclass{beamer}
+
+\usepackage{listings}
+\usepackage{fancyvrb}
+\usepackage{minted}
+
+\lstset{language=TeX}
+
+\title{How to write an \texttt{article}}
+\author{Tejas Sanap}
+\date{\today}
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	\begin{frame}
+		\frametitle{Outline}
+		\tableofcontents
+	\end{frame}
+	\begin{frame}
+		\frametitle{What makes an \texttt{article} class special?}
+		
+	\end{frame}
+
+	\section{Lists}
+	\begin{frame}[fragile]
+		\frametitle{Types of Lists}
+		\only<1>{
+			There are three types of lists in \LaTeX:
+			\begin{itemize}
+				\item \texttt{itemize}.
+				\item \texttt{enumerate}.
+				\item \texttt{description}.
+			\end{itemize}
+		}
+		\begin{onlyenv}<2>
+			Syntax:
+			\begin{minted}[autogobble]{latex}
+				\begin{itemize}
+					\item Naruto Uzumaki.
+					\item Sakura
+					\item Sasuke Uchiha.
+				\end{itemize}
+			\end{minted}
+		\end{onlyenv}
+	\end{frame}
+	
+
+	\section{Images}
+	\begin{frame}
+		\frametitle{Images}
+		
+	\end{frame}
+
+	\section{Links}
+	\begin{frame}
+		\frametitle{Links}
+	\end{frame}
+
+\end{document}

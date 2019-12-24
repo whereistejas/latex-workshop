@@ -9,6 +9,7 @@
 ## figures and stuff
 
 1. [vector images in files](https://futurestud.io/tutorials/matplotlib-save-plots-as-file)
+
 ## helpful links
 
 1. [LaTeX documentation](https://www.latex-project.org/help/documentation/#general-documentation)

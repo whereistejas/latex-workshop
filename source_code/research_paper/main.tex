@@ -3,14 +3,24 @@
 \usepackage{graphicx}
 \usepackage[inline]{enumitem}
 \usepackage{xcolor}
+\usepackage[bookmarks]{hyperref}
 \usepackage[font=small]{caption}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=brown, 
+	urlcolor=red,
+	filecolor=cyan,
+}
 
 \title{Plato's Life}
 \author{Tejas Sanap}
 \date{\today}
 
 \begin{document}
+
 	\maketitle
+	\tableofcontents
 
 	\section{Introduction}
 		% fix quotes and ---
@@ -24,6 +34,8 @@
 		% fix image size and add caption and stuff
 
 		% \includegraphics{images/plato_bust.jpg}
+
+		% \includegraphics[scale=0.5]{images/plato_bust.jpg}
 
 		% \includegraphics[width=0.3\textwidth, keepaspectratio]{images/plato_bust.jpg}
 
@@ -160,5 +172,23 @@
 			\item[Phaedo] In the Phaedo, the title character lists those who were in attendance at the prison on Socrates' last day, explaining Plato's absence by saying, ``Plato was ill".
 			\item[Republic] In the Republic, Socrates explains why an enlightened man (presumably himself) will stumble in a courtroom situation. Plato's support of aristocracy and distrust of democracy is also taken to be partly rooted in a democracy having killed Socrates.
 		\end{description}
+
+	\section{Plato's Mentor}
+		Socrates was Plato's mentor. \href{https://classicalwisdom.com/wp-content/uploads/2012/12/plato-socrates.jpg}{Here} is a painting of Socrates and Plato taking a walk.
+
+		Here is the wikipedia page about Socrates: \url{https://en.wikipedia.org/wiki/Socrates}.
+
+		This \ref{img:platobust} is a picture of Plato's bust
+
+		\href{run:./images/death_of_socrates.jpg}{Here} is picture of Socrates's death.
+
+	\section{Southern Europe}
+		\begin{tabular}{c c c}
+			\hline
+			1 & 2 & 3 \\
+			1 & 2 & 3 \\
+			1 & 2 & 3
+			\hline
+		\end{tabular}
 
 \end{document}

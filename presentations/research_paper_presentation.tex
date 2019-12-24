@@ -1,10 +1,10 @@
 \documentclass{beamer}
 
-\usepackage{listings}
-\usepackage{fancyvrb}
 \usepackage{minted}
+\usepackage{tikz}
+\usepackage{fancyvrb}
 
-\lstset{language=TeX}
+\usetikzlibrary{shapes.geometric, arrows}
 
 \title{How to write an \texttt{article}}
 \author{Tejas Sanap}
@@ -15,13 +15,46 @@
 	\begin{frame}
 		\titlepage
 	\end{frame}
+
 	\begin{frame}
 		\frametitle{Outline}
 		\tableofcontents
 	\end{frame}
-	\begin{frame}
-		\frametitle{What makes an \texttt{article} class special?}
-		
+
+	\section{Document Structure}
+	\begin{frame}[fragile]
+		\frametitle{Sectioning}
+		% define block styles
+		\tikzstyle{box}=[rectangle, draw=black, thick, minimum width=2.5cm]
+		\tikzstyle{arrow}=[draw, thick, ->, >=stealth]
+			
+		\begin{onlyenv}<1>
+			\begin{center}
+				\begin{tikzpicture}[node distance=1cm]
+					%place nodes
+					\node [box] (chap) {\verb+\chapter{}+};
+					\node [box, below of=chap] (sec) {\verb+\section{}+};
+					\node [box, below of=sec] (ssec) {\verb+\subsection{}+};
+					\node [box, below of=ssec] (sssec) {\verb+\subsubsection{}+};
+					\node [box, below of=sssec] (para) {\verb+\paragraph{}+};
+					\node [box, below of=para] (spara) {\verb+\subparagraph{}+};
+					%join edges
+					\path [arrow] (chap) -- (sec);
+					\path [arrow] (sec) -- (ssec);
+					\path [arrow] (ssec) -- (sssec);
+					\path [arrow] (sssec) -- (para);
+					\path [arrow] (para) -- (spara);
+				\end{tikzpicture}
+			\end{center}
+		\end{onlyenv}
+
+		\begin{onlyenv}<2>
+			Sectional commands have the following two forms:
+			\begin{description}
+				\item[\mintinline{latex}{\section{}}] Numbered sections.
+				\item[\mintinline{latex}{\section*{}}] Numbered sections.
+			\end{description}
+		\end{onlyenv}
 	\end{frame}
 
 	\section{Lists}
@@ -47,16 +80,19 @@
 		\end{onlyenv}
 	\end{frame}
 	
-
-	\section{Images}
-	\begin{frame}
-		\frametitle{Images}
-		
-	\end{frame}
-
 	\section{Links}
 	\begin{frame}
 		\frametitle{Links}
+		Various \texttt{hyperref} coloring options are:
+		\begin{description}[align=left]
+			\item[\mintinline{latex}{linkcolor}]
+			\item[\mintinline{latex}{urlcolor}]
+			\item[\mintinline{latex}{citecolor}]
+			\item[\mintinline{latex}{filecolor}]
+			\item[\mintinline{latex}{linkbordercolor}]
+			\item[\mintinline{latex}{urlbordercolor}]
+			\item[\mintinline{latex}{citebordercolor}]
+		\end{description}
 	\end{frame}
 
 \end{document}

@@ -1,10 +1,13 @@
 \documentclass[11pt]{article}
 
 \usepackage{graphicx}
+\usepackage{geometry}
 \usepackage[inline]{enumitem}
 \usepackage{xcolor}
 \usepackage[bookmarks]{hyperref}
 \usepackage[font=small]{caption}
+\usepackage{siunitx}
+\usepackage{multirow}
 
 \hypersetup{
 	colorlinks=true,
@@ -67,111 +70,97 @@
 		% What were Plato's main interests in terms of his work...
 		What were Plato's main interests in terms of his work \ldots
 
-		% Unordered list:
-		% \begin{itemize}
-    	%   \item Metaphysics
-		% 	\item Ethics
-		% 	\item Politics
-		% 	\item Epistemology
-		% 	\item Rhetoric
-		% 	\item Art
-		% 	\item Literature
-		% 	\item Education
-		% 	\item Society
-		% 	\item Friendship
-		% 	\item Love
-		% \end{itemize}
+		\subsection{Ordered Lists}
+			% Unordered list:
+			% \begin{itemize}
+    		%   \item Metaphysics
+			% 	\item Ethics
+			% 	\item Politics
+			% 	\item Epistemology
+			% 	\item Rhetoric
+			% 	\item Art
+			% 	\item Literature
+			% 	\item Education
+			% 	\item Society
+			% 	\item Friendship
+			% 	\item Love
+			% \end{itemize}
 
+			Ordered list:
+			% \begin{enumerate}[label={\Alph*.}]
+			% \begin{enumerate}[label={\alph*.}]
+			% \begin{enumerate}[label={\roman*.}]
+			% \begin{enumerate}[label={\Roman*.}]
 
-		Ordered list:
-		\begin{enumerate}
-    		\item Metaphysics
-			\item Ethics
-			\item Politics
-			\item Epistemology
-			\item Rhetoric
-			\item Art
-			\item Literature
-			\item Education
-			\item Society
-			\item Friendship
-			\item Love
-		\end{enumerate}
+			\begin{enumerate}
+    			\item Metaphysics
+				\item Ethics
+				\item Politics
+				\item Epistemology
+				\item Rhetoric
+				\item Art
+				\item Literature
+				\item Education
+				\item Society
+				\item Friendship
+				\item Love
+			\end{enumerate}
 
-		Ordered list:
-		% \begin{enumerate}[label={\Alph*.}]
-		% \begin{enumerate}[label={\alph*.}]
-		% \begin{enumerate}[label={\roman*.}]
-		% \begin{enumerate}[label={\Roman*.}]
-		\begin{enumerate}
-    		\item Metaphysics
-			\item Ethics
-			\item Politics
-			\item Epistemology
-			\item Rhetoric
-			\item Art
-			\item Literature
-			\item Education
-			\item Society
-			\item Friendship
-			\item Love
-		\end{enumerate}
+			Inline list: \\
+			\begin{enumerate*}
+				\item Metaphysics
+				\item Ethics
+				\item Politics
+				\item Epistemology
+				\item Rhetoric
+				\item Art
+				% \item Literature
+				\item \mbox{Literature}
+				\item Education
+				\item Society
+				\item Friendship
+				\item Love
+			\end{enumerate*}
 
-		Inline list: \\
-		\begin{enumerate*}
-    		\item Metaphysics
-			\item Ethics
-			\item Politics
-			\item Epistemology
-			\item Rhetoric
-			\item Art
-			% \item Literature
-			\item \mbox{Literature}
-			\item Education
-			\item Society
-			\item Friendship
-			\item Love
-		\end{enumerate*}
+		\subsection{Nested lists}
+			% enter nested lists from further plato-wiki-index and further in the forms as concrete and abstract objects
+			Nested list:
+			\begin{enumerate}
+    			\item Metaphysics
+					\begin{enumerate}
+						\item The forms
+							\begin{enumerate}
+								\item Concrete
+								\item[12.] Abstract
+							\end{enumerate}
+						\item The soul
+					\end{enumerate}
+				\item Ethics
+				\item Politics
+				\item Epistemology
+					\begin{enumerate}
+						\item Recollection
+						\item Justified true belief
+					\end{enumerate}
+				\item Rhetoric
+				\item Art
+			\end{enumerate}
 
-		% enter nested lists from further plato-wiki-index and further in the forms as concrete and abstract objects
+		\subsection{\texttt{description} lists}
+			\paragraph{Although} these propositions are often identified by Plato's readers as forming a large part of the core of his philosophy, many of his greatest admirers and most careful students point out that few, if any, of his writings can accurately be described as mere advocacy of a cut-and-dried group of propositions. Often Plato's works exhibit a certain degree of dissatisfaction and puzzlement with even those doctrines that are being recommended for our consideration. For example, the forms are sometimes described as hypotheses (see for example Phaedo). The form of good in particular is described as something of a mystery whose real nature is elusive and as yet unknown to anyone at all (Republic). Puzzles are raised---and not overtly answered---about how any of the forms can be known and how we are to talk about them without falling into contradiction (Parmenides), or about what it is to know anything (Theaetetus) or to name anything (Cratylus). When one compares Plato with some of the other philosophers who are often ranked with him---Aristotle, Aquinas, and Kant, for example---he can be recognized to be far more exploratory, incompletely systematic, elusive. 
+			\par The most important works of Plato are as follows:
+			% \begin{description}[align=right, labelwidth=2cm]
+			\begin{description}[align=right]
+				\item[Apology] Apology is among the most frequently read of Plato's works. In the Apology, Socrates tries to dismiss rumors that he is a sophist and defends himself against charges of disbelief in the gods and corruption of the young.
+				\item[Phaedo] In the Phaedo, the title character lists those who were in attendance at the prison on Socrates' last day, explaining Plato's absence by saying, ``Plato was ill".
+				\item[Republic] In the Republic, Socrates explains why an enlightened man (presumably himself) will stumble in a courtroom situation. Plato's support of aristocracy and distrust of democracy is also taken to be partly rooted in a democracy having killed Socrates.
+			\end{description}
 
-		Nested list:
-		\begin{enumerate}
-    		\item Metaphysics
-				\begin{enumerate}
-					\item The forms
-						\begin{enumerate}
-							\item Concrete
-							\item[12.] Abstract
-						\end{enumerate}
-					\item The soul
-				\end{enumerate}
-			\item Ethics
-			\item Politics
-			\item Epistemology
-				\begin{enumerate}
-					\item Recollection
-					\item Justified true belief
-				\end{enumerate}
-			\item Rhetoric
-			\item Art
-		\end{enumerate}
-
-		\paragraph{Although} these propositions are often identified by Plato's readers as forming a large part of the core of his philosophy, many of his greatest admirers and most careful students point out that few, if any, of his writings can accurately be described as mere advocacy of a cut-and-dried group of propositions. Often Plato's works exhibit a certain degree of dissatisfaction and puzzlement with even those doctrines that are being recommended for our consideration. For example, the forms are sometimes described as hypotheses (see for example Phaedo). The form of good in particular is described as something of a mystery whose real nature is elusive and as yet unknown to anyone at all (Republic). Puzzles are raised---and not overtly answered---about how any of the forms can be known and how we are to talk about them without falling into contradiction (Parmenides), or about what it is to know anything (Theaetetus) or to name anything (Cratylus). When one compares Plato with some of the other philosophers who are often ranked with him---Aristotle, Aquinas, and Kant, for example---he can be recognized to be far more exploratory, incompletely systematic, elusive. 
-
-		\par The most important works of Plato are as follows:
-		% \begin{description}[align=right, labelwidth=2cm]
-		\begin{description}[align=right]
-			\item[Apology] Apology is among the most frequently read of Plato's works. In the Apology, Socrates tries to dismiss rumors that he is a sophist and defends himself against charges of disbelief in the gods and corruption of the young.
-			\item[Phaedo] In the Phaedo, the title character lists those who were in attendance at the prison on Socrates' last day, explaining Plato's absence by saying, ``Plato was ill".
-			\item[Republic] In the Republic, Socrates explains why an enlightened man (presumably himself) will stumble in a courtroom situation. Plato's support of aristocracy and distrust of democracy is also taken to be partly rooted in a democracy having killed Socrates.
-		\end{description}
-
-		\begin{description}[align=left]
-			\item[Apology] Apology is among the most frequently read of Plato's works. In the Apology, Socrates tries to dismiss rumors that he is a sophist and defends himself against charges of disbelief in the gods and corruption of the young.
-			\item[Phaedo] In the Phaedo, the title character lists those who were in attendance at the prison on Socrates' last day, explaining Plato's absence by saying, ``Plato was ill".
-			\item[Republic] In the Republic, Socrates explains why an enlightened man (presumably himself) will stumble in a courtroom situation. Plato's support of aristocracy and distrust of democracy is also taken to be partly rooted in a democracy having killed Socrates.
-		\end{description}
+			\begin{description}[align=left]
+				\item[Apology] Apology is among the most frequently read of Plato's works. In the Apology, Socrates tries to dismiss rumors that he is a sophist and defends himself against charges of disbelief in the gods and corruption of the young.
+				\item[Phaedo] In the Phaedo, the title character lists those who were in attendance at the prison on Socrates' last day, explaining Plato's absence by saying, ``Plato was ill".
+				\item[Republic] In the Republic, Socrates explains why an enlightened man (presumably himself) will stumble in a courtroom situation. Plato's support of aristocracy and distrust of democracy is also taken to be partly rooted in a democracy having killed Socrates.
+			\end{description}
 
 	\section{Plato's Mentor}
 		Socrates was Plato's mentor. \href{https://classicalwisdom.com/wp-content/uploads/2012/12/plato-socrates.jpg}{Here} is a painting of Socrates and Plato taking a walk.
@@ -182,13 +171,58 @@
 
 		\href{run:./images/death_of_socrates.jpg}{Here} is picture of Socrates's death.
 
-	\section{Southern Europe}
+	\section{Mumbai's weather}
+		% using just tabular - BAD PRACTICE
 		\begin{tabular}{c c c}
-			\hline
 			1 & 2 & 3 \\
 			1 & 2 & 3 \\
-			1 & 2 & 3
-			\hline
+			1 & 2 & 3 \\
 		\end{tabular}
+		
+		\subsection{\texttt{table} environment}
+			The temperature is 30\si{\celsius} today.
+			% using table environment - it makes positioning of tables easy
+			\begin{table}[h!]
+				\centering	
+				\begin{tabular}{ |c|c|c| }
+					\hline
+					\textbf{Day} & \textbf{Max. Temp} & \textbf{Min. Temp.} \\
+					\hline
+					Tuesday   & 40\si{\celsius} & 45\si{\celsius} \\
+					Wednesday & 20\si{\celsius} & 30\si{\celsius} \\
+					Thursday  & 30\si{\celsius} & 60\si{\celsius} \\
+					Friday    & 10\si{\celsius} & 20\si{\celsius} \\
+					Monday    & 30\si{\celsius} & 40\si{\celsius} \\
+					\hline
+				\end{tabular}
+				\caption{Temperatures in the city of Mumbai.}
+				\label{table:temp-mumbai}
+			\end{table}
+
+		\subsection{Multi-columns and multi-rows}
+			% \multicolumn{4}{|c|}{Combined Row} & Cell42 \\ \hline
+			\begin{table}[ht]
+				\centering
+				\begin{tabular}{*{5}{|c}|}
+					\hline
+					Blank Space & Column1 & Column2 & Column3 & Column4 \\ \hline
+					Row1        & Cell11  & Cell21  & Cell31  & Cell41  \\ \hline
+					Row2        & Cell12  & Cell22  & Cell32  & Cell42  \\ \hline
+					Row3        & Cell13  & Cell23  & Cell33  & Cell43  \\ \hline
+					Row4        & Cell14  & Cell24  & Cell34  & Cell44  \\ \hline
+				\end{tabular}
+			\end{table}
+
+			% \begin{table}[ht]
+			% 	\centering
+			% 	\begin{tabular}{*{5}{|c}|}
+			% 		\hline
+			% 		Blank Space     & Column1                        & Column2 & Column3 & Column4 \\ \hline
+			% 		Row1            & \multirow{3}{*}{Multiple rows} & Cell21  & Cell31  & Cell41  \\ \cline{3-5}
+			% 		\cline{1-1}Row2 &                                & Cell22  & Cell32  & Cell42  \\ \cline{3-5}
+			% 		\cline{1-1}Row3 &                                & Cell23  & Cell33  & Cell43  \\ \hline
+			% 		Row4            & Cell14                         & Cell24  & Cell34  & Cell44  \\ \hline
+			% 	\end{tabular}
+			% \end{table}
 
 \end{document}

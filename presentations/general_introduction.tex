@@ -7,9 +7,8 @@
 \temporal<#1>{\color{red!50}}{\color{black}}{\color{black!50}}}
 
 \usepackage{tikz}
+\usetikzlibrary{arrows, shapes.geometric, backgrounds}
 \usepackage{minted}
-
-\usetikzlibrary{shapes.geometric, arrows}
 
 \author{Tejas Sanap}
 \title{Introduction to \LaTeX}
@@ -20,14 +19,30 @@
 		\titlepage
 	\end{frame}
 
-	\begin{frame}
-		\frametitle{A few words about myself}
-		\begin{itemize}
-			\item I mainly work in IDAM.
-			\item I work at Wipro.
-			\item I am an organizer at (and, member of ) PLUG.
-			\item I do a lot of open-source stuff.
-		\end{itemize}
+	\begin{frame}[fragile,t]
+		\frametitle{How do we write a document?}
+			The process of creating a document comprises of two components:
+			\onslide<1->{
+				\begin{itemize}
+					\item Deciding \textbf{what} the content \textbf{should be}\ldots
+					\item Deciding \textbf{how} the content \textbf{should look}\ldots
+				\end{itemize}
+			}
+			\onslide<2>{
+				\begin{figure}
+					\centering
+					\def\cirA{}
+					\def\cirB{}
+					\begin{tikzpicture}[thick, fill=blue!30]
+						\scope 
+							\clip (0,0) circle (2cm);
+							\fill (3,0) circle (2cm);
+						\endscope
+						\draw (0,0) circle (2cm) node {Matter};
+						\draw (3,0) circle (2cm) node {Form};
+					\end{tikzpicture}
+				\end{figure}
+			}
 	\end{frame}
 
 	\begin{frame}[t]
@@ -40,12 +55,10 @@
 			\item It is process that takes place after the manuscript has been written.
 		\end{itemize}
 		}
-		\onslide<3->{How do we typeset? \\}
-		\only<4>{
-		\huge{MS WORD!}
-		}
-		\only<5>{
-		\huge{{\LaTeX}!}
+		\only<3-4>{
+			How \only<3>{do}\only<4>{should} we typeset? \\
+			\only<3>{\Huge{MS WORD!}}
+			\only<4>{\Huge{{\LaTeX}!}}
 		}
 	\end{frame}
 
@@ -188,5 +201,4 @@
 			\end{itemize}
 		\end{visibleenv}
 	\end{frame}
-
 \end{document}

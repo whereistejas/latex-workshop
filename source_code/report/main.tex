@@ -18,6 +18,7 @@
 	\usepackage{longtable}
 	\usepackage{siunitx}
 	% \usepackage{showframe}
+	\usepackage[pdf]{graphviz}
 
 % Header and Footer
 	\pagestyle{fancy}
@@ -55,6 +56,8 @@
 	\maketitle
 	\tableofcontents
 	\listoffigures
+	\listoftables
+	\listoflistings
 
 \mainmatter
 	\chapter{What is the big bang?}
@@ -229,10 +232,35 @@
 			
 		\section{Future observations}
 			Future gravitational waves observatories might be able to detect primordial gravitational waves, relics of the early universe, up to less than a second after the Big Bang. 
+
+	\chapter{Code samples}
+		\section{Some python code}
+			\begin{listing}[H]
+				\centering
+				\begin{minted}[beameroverlays, linenos, autogobble]{python}
+					import matplotlib.pyplot as plt
+					num = [1,2,3,4]
+					plt.plot(num)
+				\end{minted}
+				\caption{Some python code.}
+				\label{lst:python}
+			\end{listing}
 	
 	\chapter{Steam Tables}
 		% \setlength\LTleft{-0.5in}
 		\input{assets/steam-table.tex}
+	
+	\chapter{Some graphs}
+		\section{Basics}
+			% \digraph[scale=0.5]{graph1}{%
+			% 	main [shape=box];
+			% 	main -> fn1;
+			% 	fn1 -> child1;
+			% 	fn1 -> child2;
+			% 	fn1 -> child3;
+			% 	child1 -> error;
+			% 	main -> fn2 -> error;
+			% }
 
 	\bibliography{refs.bib}
 	\bibliographystyle{alpha}

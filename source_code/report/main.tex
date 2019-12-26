@@ -13,6 +13,32 @@
 \usepackage{csquotes}
 % \usepackage{showframe}
 
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\fancypagestyle{plain}{
+		\fancyhf{}
+		\fancyfoot[L]{HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY}
+		\fancyfoot[R]{\textbf{\thepage}}
+		\renewcommand{\footrulewidth}{0.5pt}
+	}
+	% title-only
+	% \renewcommand{\sectionmark}[1]{\markright{SEC.\ #1}{}}
+	% \renewcommand{\chaptermark}[1]{\markboth{CH.\ #1}{}}
+	% number-only
+	% \renewcommand{\sectionmark}[1]{\markright{SEC. \thesection}{}}
+	% \renewcommand{\chaptermark}[1]{\markboth{CH.\ \thechapter}{}}
+	% both
+	\renewcommand{\sectionmark}[1]{\markright{SEC.\ \thesection\ #1}{}}
+	\renewcommand{\chaptermark}[1]{\markboth{CH.\ \thechapter\ #1}{}}
+
+	\fancyhead[L]{\rightmark}
+	\fancyhead[R]{\leftmark}
+	\fancyfoot[L]{HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{\textbf{\thepage}}
+	\renewcommand{\headrulewidth}{0.5pt}
+	\renewcommand{\footrulewidth}{0.5pt}
+
 \svgpath{images/}
 
 \title{\large The Big Bang}

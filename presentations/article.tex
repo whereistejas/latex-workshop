@@ -7,6 +7,7 @@
 \usetikzlibrary{shapes.geometric, arrows}
 
 \title{How to write an \texttt{article}}
+\subtitle{\tiny Clue: Make a really cool bibliography}
 \author{Tejas Sanap}
 \date{\today}
 
@@ -70,7 +71,7 @@
 		\begin{onlyenv}<2>
 			Syntax:
 			\begin{minted}[autogobble]{latex}
-				\begin{itemize}
+				\begin{itemize}[align=left]
 					\item Naruto Uzumaki.
 					\item Sakura
 					\item Sasuke Uchiha.
@@ -78,20 +79,42 @@
 			\end{minted}
 		\end{onlyenv}
 	\end{frame}
+
+	\begin{frame}[t]
+		\frametitle{How do I modify lists?}
+			\vfill
+			Use a package called \texttt{enumitem}.
+			\vfill
+			It lets us change:
+			\begin{itemize}
+				\item Labels.
+				\item Margins.
+				\item Alignment.
+				\item Direction (vertical or inline).
+			\end{itemize}
+			\vfill
+	\end{frame}
 	
 	\section{Links}
 	\begin{frame}
-		\frametitle{Links}
-		Various \texttt{hyperref} coloring options are:
-		\begin{description}[align=left]
-			\item[\mintinline{latex}{linkcolor}]
-			\item[\mintinline{latex}{urlcolor}]
-			\item[\mintinline{latex}{citecolor}]
-			\item[\mintinline{latex}{filecolor}]
-			\item[\mintinline{latex}{linkbordercolor}]
-			\item[\mintinline{latex}{urlbordercolor}]
-			\item[\mintinline{latex}{citebordercolor}]
-		\end{description}
+		\frametitle{How do I insert links?}
+			\only<1>{
+				Use the command	\mintinline{latex}{\url} or \mintinline{latex}{\href}
+				\vskip 1\baselineskip
+				We can refer to internal objects by: \mintinline{latex}{\href{item-label}{text}}
+			}
+			\only<2-4>{
+				\temporal<3>{Four types of links}{Four colors}:
+				\begin{itemize}
+					\item \only<3>{\mintinline{latex}{link}} \only<4->{\mintinline{latex}{linkcolor}}
+					\item \only<3>{\mintinline{latex}{url}} \only<4->{\mintinline{latex}{urlcolor}}
+					\item \only<3>{\mintinline{latex}{cite}} \only<4->{\mintinline{latex}{citecolor}}
+					\item \only<3>{\mintinline{latex}{file}} \only<4->{\mintinline{latex}{filecolor}}
+					\only<4->{\item \mintinline{latex}{linkbordercolor}}
+					\only<4->{\item \mintinline{latex}{urlbordercolor}}
+					\only<4->{\item \mintinline{latex}{citebordercolor}}
+				\end{itemize}
+			}
 	\end{frame}
 
 	\section{Tables}
@@ -101,7 +124,8 @@
 				\item Never use vertical lines.
 				\item Avoid double lines.
 				\item Place the units in the headings.
-				\item Do not use quotation marks to repeat the content of the cells.
+				\item Don't use quotation marks to repeat content.
 			\end{enumerate}
 	\end{frame}
+
 \end{document}

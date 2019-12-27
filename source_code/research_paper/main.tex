@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage[inline]{enumitem}
+\usepackage{moreenum}
 \usepackage{xcolor}
 \usepackage[bookmarks]{hyperref}
 \usepackage[font=small]{caption}
@@ -11,9 +12,10 @@
 
 \hypersetup{
 	colorlinks=true,
-	linkcolor=brown, 
-	urlcolor=red,
+	linkcolor=red,
+	urlcolor=green,
 	filecolor=cyan,
+	citecolor=purple,
 }
 
 \title{Plato's Life}
@@ -21,7 +23,6 @@
 \date{\today}
 
 \begin{document}
-
 	\maketitle
 	\tableofcontents
 
@@ -70,27 +71,31 @@
 		% What were Plato's main interests in terms of his work...
 		What were Plato's main interests in terms of his work \ldots
 
-		\subsection{Ordered Lists}
-			% Unordered list:
-			% \begin{itemize}
-    		%   \item Metaphysics
-			% 	\item Ethics
-			% 	\item Politics
-			% 	\item Epistemology
-			% 	\item Rhetoric
-			% 	\item Art
-			% 	\item Literature
-			% 	\item Education
-			% 	\item Society
-			% 	\item Friendship
-			% 	\item Love
-			% \end{itemize}
+		\subsection{Unordered and ordered Lists}
+			Unordered list:
+			\begin{itemize}[label=$\ast$, align=right]
+    		  	\item Metaphysics
+				\item Ethics
+				\item Politics
+				\item Epistemology
+				\item Rhetoric
+				\item Art
+				\item Literature
+				\item Education
+				\item Society
+				\item Friendship
+				\item Love
+			\end{itemize}
 
 			Ordered list:
 			% \begin{enumerate}[label={\Alph*.}]
 			% \begin{enumerate}[label={\alph*.}]
 			% \begin{enumerate}[label={\roman*.}]
 			% \begin{enumerate}[label={\Roman*.}]
+			% \begin{enumerate}[label={(\greek*)}]
+
+			Unordered list:
+			% \begin{itemize}[label={}]
 
 			\begin{enumerate}
     			\item Metaphysics
@@ -167,9 +172,11 @@
 
 		Here is the wikipedia page about Socrates: \url{https://en.wikipedia.org/wiki/Socrates}.
 
-		This \ref{img:platobust} is a picture of Plato's bust
+		Figure \ref{img:platobust} is a picture of Plato's bust
 
 		\href{run:./images/death_of_socrates.jpg}{Here} is picture of Socrates's death.
+
+		I just read an interesting book\cite{finley1977aspects} about Plato.
 
 	\section{Mumbai's weather}
 		\begin{tabular}{c c c}
@@ -224,5 +231,8 @@
 			% 		Row4            & Cell14                         & Cell24  & Cell34  & Cell44  \\ \hline
 			% 	\end{tabular}
 			% \end{table}
+	
+	\bibliography{refs.bib}
+	\bibliographystyle{alpha}
 
 \end{document}

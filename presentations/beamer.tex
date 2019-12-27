@@ -5,6 +5,8 @@
 
 \usepackage{minted}
 \usepackage{blindtext}
+\usepackage{amsmath}
+\usepackage{lmodern}
 
 \title{How to make nice slides?}
 \subtitle{\tiny(Clue: Keep it minimalistic)}
@@ -80,11 +82,21 @@
 					\column{0.5\textwidth}
 						\begin{figure}[h]
 							\centering
-							\includegraphics[width=, keepaspectratio]{}
+							\includegraphics[width=\linewidth, keepaspectratio]{images/tgwoc.jpg}
 							\caption{The great wall of China}
 							\label{img:great-wall-of-china}
 						\end{figure}
 				\end{columns}
+			}
+			\only<4>{
+				\begin{minipage}[t][0.3\textheight][t]{\textwidth}
+					\begin{align*}
+						i \hbar \frac{\partial}{\partial t} \Psi(\mathbf{r},t)=\hat H \Psi(\mathbf{r},t)
+					\end{align*}
+				\end{minipage}
+				\begin{minipage}[t][0.7\textheight][t]{\textwidth}
+					\small Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam lobortis facilisis sem. Nullam nec mi et neque pharetra sollicitudin. Praesent imperdiet mi nec ante. Donec ullamcorper, felis non sodales commodo, lectus velit ultrices augue, a dignissim nibh lectus placerat pede. Vivamus nunc nunc, molestie ut, ultricies vel, semper in, velit. Ut porttitor. Praesent in sapien. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis fringilla tristique neque. Sed interdum libero ut metus. Pellentesque placerat. Nam rutrum augue a leo. Morbi sed elit sit amet ante lobortis sollicitudin. Praesent blandit blandit mauris.
+				\end{minipage}
 			}
 		\end{frame}
 	\section{Overlays}

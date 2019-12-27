@@ -260,34 +260,55 @@
 		\end{columns}
 	\end{frame}
 
+	\begin{frame}
+		\frametitle{Lengths in {\LaTeX}}
+		\scriptsize
+		\begin{description}
+			\item[\mintinline{latex}{\baselineskip}] 		Vertical distance between lines in a paragraph
+			\item[\mintinline{latex}{\columnsep}] 			Distance between columns
+			\item[\mintinline{latex}{\columnwidth}] 		The width of a column
+			\item[\mintinline{latex}{\evensidemargin}] 	Margin of even pages, commonly used in two-sided documents such as books
+			\item[\mintinline{latex}{\linewidth}] 			Width of the line in the current environment.
+			\item[\mintinline{latex}{\oddsidemargin}] 		Margin of odd pages, commonly used in two-sided documents such as books
+			\item[\mintinline{latex}{\paperwidth}] 		Width of the page
+			\item[\mintinline{latex}{\paperheight}] 		Height of the page
+			\item[\mintinline{latex}{\parindent}] 			Paragraph indentation
+			\item[\mintinline{latex}{\parskip}] 			Vertical space between paragraphs
+			\item[\mintinline{latex}{\tabcolsep}] 			Separation between columns in a table (tabular environment)
+			\item[\mintinline{latex}{\textheight}] 		Height of the text area in the page
+			\item[\mintinline{latex}{\textwidth}] 			Width of the text area in the page
+			\item[\mintinline{latex}{\topmargin}] 			Length of the top margin 	
+		\end{description}
+	\end{frame}
+
 	% crap
-			%		\colorlet{circle area1}{blue!20}
-			%		\colorlet{circle area2}{green!20}
- 			%		\tikzset{
-			%			% filled1/.style={fill=circle area1, draw=circle edge, thick},
-			%			% filled2/.style={fill=circle area2, draw=circle edge, thick},
-			%			filled/.style={fill=circle area, draw=circle edge, thick},
-			%			outline/.style={draw=circle edge, thick}
-			%		}
-			%		% \only<4>{
-			%		% 	\begin{tikzpicture}[thick, fill=blue!30]
-			%		% 		\scope 
-			%		% 			\clip (0,0) circle (2cm);
-			%		% 			\fill (3,0) circle (2cm);
-			%		% 		\endscope
-			%		% 		\draw (0,0) circle (2cm) node {Matter};
-			%		% 		\draw (3,0) circle (2cm) node {Form};
-			%		% 	\end{tikzpicture}
-			%		% }
-			%		\only<4>{
-			%			\begin{tikzpicture}
-			%				\begin{scope}
-			%					\clip \cirA;
-			%					\draw[filled, even odd rule] \cirA
-			%												 \cirB node {Form};
-			%				\end{scope}
-			%				\draw \cirA node {Matter}
-			%							   \cirB;
-			%			\end{tikzpicture}
-			%		}
+		%		\colorlet{circle area-1}{blue!20}
+		%		\colorlet{circle area2}{green!20}
+		%		\tikzset{
+		%			% filled1/.style={fill=circle area1, draw=circle edge, thick},
+		%			% filled2/.style={fill=circle area2, draw=circle edge, thick},
+		%			filled/.style={fill=circle area, draw=circle edge, thick},
+		%			outline/.style={draw=circle edge, thick}
+		%		}
+		%		% \only<4>{
+		%		% 	\begin{tikzpicture}[thick, fill=blue!30]
+		%		% 		\scope 
+		%		% 			\clip (0,0) circle (2cm);
+		%		% 			\fill (3,0) circle (2cm);
+		%		% 		\endscope
+		%		% 		\draw (0,0) circle (2cm) node {Matter};
+		%		% 		\draw (3,0) circle (2cm) node {Form};
+		%		% 	\end{tikzpicture}
+		%		% }
+		%		\only<4>{
+		%			\begin{tikzpicture}
+		%				\begin{scope}
+		%					\clip \cirA;
+		%					\draw[filled, even odd rule] \cirA
+		%												 \cirB node {Form};
+		%				\end{scope}
+		%				\draw \cirA node {Matter}
+		%							   \cirB;
+		%			\end{tikzpicture}
+		%		}
 \end{document}

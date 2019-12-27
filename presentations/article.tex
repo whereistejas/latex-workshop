@@ -3,8 +3,15 @@
 \usepackage{minted}
 \usepackage{tikz}
 \usepackage{fancyvrb}
+\usepackage{booktabs}
+\usepackage[font=scriptsize]{caption}
 
 \usetikzlibrary{shapes.geometric, arrows}
+
+\newcommand{\mysc}[1]{\textrm{\textsc{#1}}}
+\newcommand{\mylf}[1]{\textrm{\textlf{#1}}}
+
+\setbeamertemplate{footline}[frame number]
 
 \title{How to write an \texttt{article}}
 \subtitle{\tiny Clue: Make a really cool bibliography}
@@ -38,7 +45,7 @@
 					\node [box, below of=ssec] (sssec) {\verb+\subsubsection{}+};
 					\node [box, below of=sssec] (para) {\verb+\paragraph{}+};
 					\node [box, below of=para] (spara) {\verb+\subparagraph{}+};
-					%join edges
+					
 					\path [arrow] (chap) -- (sec);
 					\path [arrow] (sec) -- (ssec);
 					\path [arrow] (ssec) -- (sssec);
@@ -55,6 +62,49 @@
 				\item[\mintinline{latex}{\section*{}}] Numbered sections.
 			\end{description}
 		\end{onlyenv}
+	\end{frame}
+
+	\section{Font typefaces and sizes}
+	\begin{frame}[t, fragile]
+		\frametitle{Typefaces}
+			\vfill
+			There are 13 font families:
+			\vfill
+			\begin{description}[align=left, margin=0.5cm]
+				\item<+->[\mintinline{latex}{\textnormal}]  \textnormal{Document font family}.
+				\item<+->[\mintinline{latex}{\emph}] 		\emph{emphasis, typically italics}.
+				\item<+->[\mintinline{latex}{\textrm}] 		\textrm{Roman font family}.
+				\item<+->[\mintinline{latex}{\textsf}] 		\textsf{San serif font family}.
+				\item<+->[\mintinline{latex}{\texttt}] 		\texttt{Teletypefont or monospace font}.
+				\item<+->[\mintinline{latex}{\textup}] 		\textup{Upright shape, same as normal font}.
+				\item<+->[\mintinline{latex}{\textit}] 		\textit{Italic shape}.
+				\item<+->[\mintinline{latex}{\textsl}] 		\textsl{Slanted shape}.
+				\item<+->[\mintinline{latex}{\textsc}] 		\mysc{Small capitals}.
+				\item<+->[\mintinline{latex}{\uppercase}] 	\uppercase{Uppercase, all caps}.
+				\item<+->[\mintinline{latex}{\textbf}] 		\textbf{Bold font}.
+				\item<+->[\mintinline{latex}{\textmd}] 		\textmd{medium weight}.
+				% \item[\mintinline{latex}{\textlf}] 		\mylf{light}.
+			\end{description}
+			\vfill
+	\end{frame}
+
+	\begin{frame}[t]
+		\frametitle{Sizes}
+			\vfill
+			There are 9 font sizes:
+			\vfill
+			\begin{description}[align=left, margin=0.5cm]
+				\item<+->[\tiny \mintinline{latex}{\tiny}] \tiny{tiny}.
+				\item<+->[\mintinline{latex}{\scriptsize}] \scriptsize{sciprtsize}.
+				\item<+->[\mintinline{latex}{\footnotesize}] \footnotesize{footnotesize}.
+				\item<+->[\mintinline{latex}{\small}] \small{small}.
+				\item<+->[\mintinline{latex}{\normalsize}] \normalsize{normalsize}.
+				\item<+->[\mintinline{latex}{\large}] \large{large}.
+				\item<+->[\mintinline{latex}{\Large}] \Large{Large}.
+				\item<+->[\mintinline{latex}{\huge}] \huge{huge}.
+				\item<+->[\mintinline{latex}{\Huge}] \Huge{Huge}.
+			\end{description}
+			\vfill
 	\end{frame}
 
 	\section{Lists}
@@ -98,21 +148,49 @@
 	\section{Links}
 	\begin{frame}
 		\frametitle{How do I insert links?}
-			\only<1>{
+			\only<1-2>{
 				Use the command	\mintinline{latex}{\url} or \mintinline{latex}{\href}
 				\vskip 1\baselineskip
-				We can refer to internal objects by: \mintinline{latex}{\href{item-label}{text}}
+				\onslide<2>{We can refer to internal objects by: \mintinline{latex}{\href{item-label}{text}} or \mintinline{latex}{\ref}}.
 			}
-			\only<2-4>{
-				\temporal<3>{Four types of links}{Four colors}:
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{How do I change link colors?}
+			\vfill
+			Use a package called \texttt{hyperref}.
+			\vfill
+			It lets us:
+			\begin{itemize}
+				\item Change link colors.
+				\item Add bookmarks.
+				\item Set PDF properties.
+				\item Cross-referencing.
+			\end{itemize}
+			\vfill
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Types of Links}
+			\only<1>{
+				The four types of links are:
 				\begin{itemize}
-					\item \only<3>{\mintinline{latex}{link}} \only<4->{\mintinline{latex}{linkcolor}}
-					\item \only<3>{\mintinline{latex}{url}} \only<4->{\mintinline{latex}{urlcolor}}
-					\item \only<3>{\mintinline{latex}{cite}} \only<4->{\mintinline{latex}{citecolor}}
-					\item \only<3>{\mintinline{latex}{file}} \only<4->{\mintinline{latex}{filecolor}}
-					\only<4->{\item \mintinline{latex}{linkbordercolor}}
-					\only<4->{\item \mintinline{latex}{urlbordercolor}}
-					\only<4->{\item \mintinline{latex}{citebordercolor}}
+					\item \mintinline{latex}{link}
+					\item \mintinline{latex}{url} 
+					\item \mintinline{latex}{cite}
+					\item \mintinline{latex}{file}
+				\end{itemize}
+			}
+			\only<2>{
+				The various link colors are:
+				\begin{itemize}
+					\item \mintinline{latex}{linkcolor}
+					\item \mintinline{latex}{urlcolor}
+					\item \mintinline{latex}{citecolor}
+					\item \mintinline{latex}{filecolor}
+					\item \mintinline{latex}{linkbordercolor}
+					\item \mintinline{latex}{urlbordercolor}
+					\item \mintinline{latex}{citebordercolor}
 				\end{itemize}
 			}
 	\end{frame}
@@ -126,6 +204,73 @@
 				\item Place the units in the headings.
 				\item Don't use quotation marks to repeat content.
 			\end{enumerate}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{How to make a table?}
+		\begin{onlyenv}<1-2>
+			To make a table we use the \texttt{tabular} environment.
+			\vfill
+			\begin{visibleenv}<2>
+				Syntax:
+				\begin{minted}[beameroverlays, linenos, autogobble]{latex}
+					\begin{tabular}{c c c}
+						1 & 2 & 3 \\
+						1 & 2 & 3 \\
+						1 & 2 & 3 \\
+					\end{tabular}
+				\end{minted}
+			\end{visibleenv}
+			\vfill
+		\end{onlyenv}
+		\only<3->{
+			\begin{itemize}
+				\item<4-> Tables are floats.
+				\item<5-> They need to be put inside the \texttt{table} environment.
+				\item<6-> Columns can be aligned as:
+					\begin{description}
+						\item<7->[Horizontal alignment] \texttt{l, c, r}.
+						\item<8->[Vertical alignment] \texttt{p, m, b}.
+					\end{description}
+				\item<9-> Vertical alignment needs \texttt{array} package.
+			\end{itemize}
+		}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{How to make my tables prettier?}
+		\only<1>{
+		\vskip1\baselineskip
+		\vskip1\baselineskip
+		\begin{table}[h]
+			\begin{tabular}{|l|c|c|} \hline
+					Name & Subject & Marks \\\hline
+					Naruto & Taijutsu & 80 \\\hline
+					Shiba & Ninjutsu & 82 \\\hline
+					Sakura & Genjutsu & 99 \\\hline
+					Boruto & All jutsu & 00 \\\hline
+			\end{tabular}
+			\caption{Marks of various students in Ninja Academy.}
+			\label{table:normal-ninja-marks}
+		\end{table}
+		}
+		\only<2-3>{
+		\onslide<2->{Use a package called \texttt{booktabs}.}
+		\begin{table}[h]
+			\begin{tabular}{lcc}
+				\toprule
+					Name & Subject & Marks \\
+				\midrule
+					Naruto & Taijutsu & 80 \\
+					Shiba & Ninjutsu & 82 \\
+					Sakura & Genjutsu & 99 \\
+					Boruto & All jutsu & 00 \\
+				\bottomrule
+			\end{tabular}
+			\caption{Marks of various students in Ninja Academy.}
+			\label{table:booktabs-ninja-marks}
+		\end{table}
+		}
 	\end{frame}
 
 \end{document}

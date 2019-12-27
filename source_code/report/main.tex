@@ -19,6 +19,8 @@
 	\usepackage{siunitx}
 	% \usepackage{showframe}
 	\usepackage[pdf]{graphviz}
+	\usepackage{blindtext}
+	\usepackage{tocbibind}
 
 % Header and Footer
 	\pagestyle{fancy}
@@ -35,7 +37,9 @@
 	% \renewcommand{\sectionmark}[1]{\markright{SEC. \thesection}{}}
 	% \renewcommand{\chaptermark}[1]{\markboth{CH.\ \thechapter}{}}
 	% both
-	\renewcommand{\sectionmark}[1]{\markright{SEC.\ \thesection\ #1}{}}
+	% \renewcommand{\sectionmark}[1]{\markright{SEC.\ \thesection\ #1}{}}
+	\renewcommand{\chaptermark}[1]{\markboth{CH.\ \thechapter\ #1}{}}
+	% \renewcommand{\sectionmark}[1]{\markright{SEC.\ \thechapter\ #1}{}}
 	\renewcommand{\chaptermark}[1]{\markboth{CH.\ \thechapter\ #1}{}}
 
 	\fancyhead[L]{\rightmark}
@@ -45,7 +49,6 @@
 	\fancyfoot[R]{\textbf{\thepage}}
 	\renewcommand{\headrulewidth}{0.5pt}
 	\renewcommand{\footrulewidth}{0.5pt}
-
 
 \title{\large The Big Bang}
 \author{Tejas Sanap}
@@ -59,14 +62,18 @@
 	\listoftables
 	\listoflistings
 
+	\chapter*{Abstract}
+		\blindtext
+
 \mainmatter
-	\chapter{What is the big bang?}
+		
+	\chapter{What is the big bang?} % subfigures
 		\section{Introduction}
 		The Big Bang theory is a cosmological model for the observable universe from the earliest known periods through its subsequent large-scale evolution\cite{2004biba.book.....S}. The model describes how the universe expanded from a very high-density and high-temperature state, and offers a comprehensive explanation for a broad range of phenomena, including the abundance of light elements, the cosmic microwave background (CMB), large-scale structure and Hubble's law (the farther away galaxies are, the faster they are moving away from Earth). If the observed conditions are extrapolated backwards in time using the known laws of physics, the prediction is that just before a period of very high density there was a singularity which is typically associated with the Big Bang. Current knowledge is insufficient to determine if the singularity was primordial.
 		
 		Georges Lemaître first noted in 1927 that an expanding universe could be traced back in time to an originating single point, calling his theory that of the "primeval atom". The scientific community was once divided between supporters of two different theories, the Big Bang and the steady state theory, but a wide range of empirical evidence has strongly favored the Big Bang which is now universally accepted\cite{kragh1999cosmology}. In 1929, from analysis of galactic redshifts, Edwin Hubble concluded that galaxies are drifting apart; this is important observational evidence for an expanding universe. In 1964, the cosmic microwave background radiation was discovered, which was crucial evidence in favor of the hot Big Bang model\cite{partridge20073k}, since that theory predicted the existence of background radiation throughout the universe before it was discovered.
-		
-			The known physical laws of nature can be used to calculate the characteristics of the universe in detail back in time to an initial state of extreme density and temperature. Detailed measurements of the expansion rate of the universe place the Big Bang at around 13.8 billion years ago, which is thus considered the age of the universe. After its initial expansion, the universe cooled sufficiently to allow the formation of subatomic particles, and later atoms. Giant clouds of these primordial elements (mostly hydrogen, with some helium and lithium) later coalesced through gravity, eventually forming early stars and galaxies, the descendants of which are visible today. Astronomers also observe the gravitational effects of dark matter surrounding galaxies. Most of the matter in the universe seems to be in the form of dark matter, and the Big Bang theory and various observations indicate that it is not conventional baryonic matter (atoms). It is still not known exactly what dark matter is. More recently, measurements of the redshifts of supernovae indicate that the expansion of the universe is accelerating, an observation attributed to dark energy's existence\cite{2003RvMP...75..559P}.
+
+		The known physical laws of nature can be used to calculate the characteristics of the universe in detail back in time to an initial state of extreme density and temperature. Detailed measurements of the expansion rate of the universe place the Big Bang at around 13.8 billion years ago, which is thus considered the age of the universe. After its initial expansion, the universe cooled sufficiently to allow the formation of subatomic particles, and later atoms. Giant clouds of these primordial elements (mostly hydrogen, with some helium and lithium) later coalesced through gravity, eventually forming early stars and galaxies, the descendants of which are visible today. Astronomers also observe the gravitational effects of dark matter surrounding galaxies. Most of the matter in the universe seems to be in the form of dark matter, and the Big Bang theory and various observations indicate that it is not conventional baryonic matter (atoms). It is still not known exactly what dark matter is. More recently, measurements of the redshifts of supernovae indicate that the expansion of the universe is accelerating, an observation attributed to dark energy's existence\cite{2003RvMP...75..559P}.
 		
 			\begin{figure}[h]
 				\begin{subfigure}{0.5\textwidth}
@@ -126,7 +133,7 @@
 				
 				Our understanding of the universe back to very early times suggests that there is a past horizon, though in practice our view is also limited by the opacity of the universe at early times. So our view cannot extend further backward in time, though the horizon recedes in space. If the expansion of the universe continues to accelerate, there is a future horizon as well.
 
-	\chapter{Timeline}
+	\chapter{Timeline} % wrapfigures
 		\section{Singularity}
 			Extrapolation of the expansion of the universe backwards in time using general relativity yields an infinite density and temperature at a finite time in the past. This singularity indicates that general relativity is not an adequate description of the laws of physics in this regime. Models based on general relativity alone can not extrapolate toward the singularity beyond the end of the Planck epoch.
 			% match text within quote: /".\{-}"
@@ -138,7 +145,7 @@
 			The earliest phases of the Big Bang are subject to much speculation. In the most common models the universe was filled homogeneously and isotropically with a very high energy density and huge temperatures and pressures and was very rapidly expanding and cooling. Approximately 10--37 seconds into the expansion, a phase transition caused a cosmic inflation, during which the universe grew exponentially and during which time density fluctuations that occurred because of the uncertainty principle were amplified into the seeds that would later form the large-scale structure of the universe. After inflation stopped, reheating occurred until the universe obtained the temperatures required for the production of a quark–gluon plasma as well as all other elementary particles. Temperatures were so high that the random motions of particles were at relativistic speeds, and particle–antiparticle pairs of all kinds were being continuously created and destroyed in collisions. At some point, an unknown reaction called baryogenesis violated the conservation of baryon number, leading to a very small excess of quarks and leptons over antiquarks and antileptons---of the order of one part in 30 million. This resulted in the predominance of matter over antimatter in the present universe. 
 		
 		\goodbreak
-		\section{Cooling}
+		\section{Cooling} % wrapfigures
 			The universe continued to decrease in density and fall in temperature, hence the typical energy of each particle was decreasing. Symmetry breaking phase transitions put the fundamental forces of physics and the parameters of elementary particles into their present form. After about 10--11 seconds, the picture becomes less speculative, since particle energies drop to values that can be attained in particle accelerators. At about 10--6 seconds, quarks and gluons combined to form baryons such as protons and neutrons. The small excess of quarks over antiquarks led to a small excess of baryons over antibaryons. The temperature was now no longer high enough to create new proton–antiproton pairs (similarly for neutrons–antineutrons), so a mass annihilation immediately followed, leaving just one in 1010 of the original protons and neutrons, and none of their antiparticles. A similar process happened at about 1 second for electrons and positrons. After these annihilations, the remaining protons, neutrons and electrons were no longer moving relativistically and the energy density of the universe was dominated by photons (with a minor contribution from neutrinos).
 	
 			\begin{wrapfigure}{l}{0.4\textwidth}
@@ -233,7 +240,7 @@
 		\section{Future observations}
 			Future gravitational waves observatories might be able to detect primordial gravitational waves, relics of the early universe, up to less than a second after the Big Bang. 
 
-	\chapter{Code samples}
+	\chapter{Code samples} % coding
 		\section{Some python code}
 			\begin{listing}[H]
 				\centering
@@ -246,11 +253,11 @@
 				\label{lst:python}
 			\end{listing}
 	
-	\chapter{Steam Tables}
+	\chapter{Steam Tables} % multi-files
 		% \setlength\LTleft{-0.5in}
 		\input{assets/steam-table.tex}
 	
-	\chapter{Some graphs}
+	\chapter{Some graphs} % graphs
 		\section{Basics}
 			% \digraph[scale=0.5]{graph1}{%
 			% 	main [shape=box];
@@ -262,6 +269,7 @@
 			% 	main -> fn2 -> error;
 			% }
 
+	% Bibliography
 	\bibliography{refs.bib}
 	\bibliographystyle{alpha}
 
